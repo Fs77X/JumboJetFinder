@@ -19,7 +19,7 @@ jobs:
           envkey_REACT_APP_ID: ${{secrets.REACT_APP_ID}}
           envkey_REACT_APP_SECRET: ${{secrets.REACT_APP_SECRET}}
       - run: cat .env
-      - run: npm build
+      - run: npm run build
       - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
